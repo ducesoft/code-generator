@@ -128,11 +128,12 @@ func DefaultNameSystem() string {
 	return "public"
 }
 
-func packageForGroup(gv clientgentypes.GroupVersion, typeList []*types.Type, clientsetPackage string, groupPackageName string, groupGoName string, apiPath string, srcTreePath string, inputPackage string, boilerplate []byte) generator.Package {
+func packageForGroup(gv clientgentypes.GroupVersion, typeList []*types.Type, clientsetPackage string, clientsetPath string, groupPackageName string, groupGoName string, apiPath string, srcTreePath string, inputPackage string, boilerplate []byte) generator.Package {
 	groupVersionClientPackage := filepath.Join(clientsetPackage, "typed", strings.ToLower(groupPackageName), strings.ToLower(gv.Version.NonEmpty()))
+	groupVersionClientPath := filepath.Join(clientsetPath, "typed", strings.ToLower(groupPackageName), strings.ToLower(gv.Version.NonEmpty()))
 	return &generator.DefaultPackage{
 		PackageName: strings.ToLower(gv.Version.NonEmpty()),
-		PackagePath: groupVersionClientPackage,
+		PackagePath: groupVersionClientPath,
 		HeaderText:  boilerplate,
 		PackageDocumentation: []byte(
 			`// This package has the automatically generated typed clients.
@@ -193,10 +194,10 @@ func packageForGroup(gv clientgentypes.GroupVersion, typeList []*types.Type, cli
 	}
 }
 
-func packageForClientset(customArgs *clientgenargs.CustomArgs, clientsetPackage string, groupGoNames map[clientgentypes.GroupVersion]string, boilerplate []byte) generator.Package {
+func packageForClientset(customArgs *clientgenargs.CustomArgs, clientsetPackage string, clientsetPath string, groupGoNames map[clientgentypes.GroupVersion]string, boilerplate []byte) generator.Package {
 	return &generator.DefaultPackage{
 		PackageName: customArgs.ClientsetName,
-		PackagePath: clientsetPackage,
+		PackagePath: clientsetPath,
 		HeaderText:  boilerplate,
 		PackageDocumentation: []byte(
 			`// This package has the automatically generated clientset.
@@ -224,8 +225,9 @@ func packageForClientset(customArgs *clientgenargs.CustomArgs, clientsetPackage 
 	}
 }
 
-func packageForScheme(customArgs *clientgenargs.CustomArgs, clientsetPackage string, srcTreePath string, groupGoNames map[clientgentypes.GroupVersion]string, boilerplate []byte) generator.Package {
+func packageForScheme(customArgs *clientgenargs.CustomArgs, clientsetPackage string, clientsetPath string, srcTreePath string, groupGoNames map[clientgentypes.GroupVersion]string, boilerplate []byte) generator.Package {
 	schemePackage := filepath.Join(clientsetPackage, "scheme")
+	schemePath:= filepath.Join(clientsetPath, "scheme")
 
 	// create runtime.Registry for internal client because it has to know about group versions
 	internalClient := false
@@ -241,7 +243,7 @@ NextGroup:
 
 	return &generator.DefaultPackage{
 		PackageName: "scheme",
-		PackagePath: schemePackage,
+		PackagePath: schemePath,
 		HeaderText:  boilerplate,
 		PackageDocumentation: []byte(
 			`// This package contains the scheme of the automatically generated clientset.
@@ -259,7 +261,7 @@ NextGroup:
 					},
 					InputPackages:  customArgs.GroupVersionPackages(),
 					OutputPackage:  schemePackage,
-					OutputPath:     filepath.Join(srcTreePath, schemePackage),
+					OutputPath:     filepath.Join(srcTreePath, schemePath),
 					Groups:         customArgs.Groups,
 					GroupGoNames:   groupGoNames,
 					ImportTracker:  generator.NewImportTracker(),
@@ -370,16 +372,17 @@ func Packages(context *generator.Context, arguments *args.GeneratorArgs) generat
 	}
 
 	var packageList []generator.Package
+	clientsetPath:=arguments.OutputPackagePath
 	// Clientset package can be override by customized clientset-package instead of [output-package + clientset-name]
 	clientsetPackage := customArgs.ClientsetPackage
 	if "" == customArgs.ClientsetPackage {
 		clientsetPackage = filepath.Join(arguments.OutputPackagePath, customArgs.ClientsetName)
 	}
 
-	packageList = append(packageList, packageForClientset(customArgs, clientsetPackage, groupGoNames, boilerplate))
-	packageList = append(packageList, packageForScheme(customArgs, clientsetPackage, arguments.OutputBase, groupGoNames, boilerplate))
+	packageList = append(packageList, packageForClientset(customArgs, clientsetPackage, clientsetPath, groupGoNames, boilerplate))
+	packageList = append(packageList, packageForScheme(customArgs, clientsetPackage, clientsetPath, arguments.OutputBase, groupGoNames, boilerplate))
 	if customArgs.FakeClient {
-		packageList = append(packageList, fake.PackageForClientset(customArgs, clientsetPackage, groupGoNames, boilerplate))
+		packageList = append(packageList, fake.PackageForClientset(customArgs, clientsetPackage, clientsetPath, groupGoNames, boilerplate))
 	}
 
 	// If --clientset-only=true, we don't regenerate the individual typed clients.
@@ -394,9 +397,9 @@ func Packages(context *generator.Context, arguments *args.GeneratorArgs) generat
 			gv := clientgentypes.GroupVersion{Group: group.Group, Version: version.Version}
 			types := gvToTypes[gv]
 			inputPath := gvPackages[gv]
-			packageList = append(packageList, packageForGroup(gv, orderer.OrderTypes(types), clientsetPackage, group.PackageName, groupGoNames[gv], customArgs.ClientsetAPIPath, arguments.OutputBase, inputPath, boilerplate))
+			packageList = append(packageList, packageForGroup(gv, orderer.OrderTypes(types), clientsetPackage, clientsetPath, group.PackageName, groupGoNames[gv], customArgs.ClientsetAPIPath, arguments.OutputBase, inputPath, boilerplate))
 			if customArgs.FakeClient {
-				packageList = append(packageList, fake.PackageForGroup(gv, orderer.OrderTypes(types), clientsetPackage, group.PackageName, groupGoNames[gv], inputPath, boilerplate))
+				packageList = append(packageList, fake.PackageForGroup(gv, orderer.OrderTypes(types), clientsetPackage, clientsetPath, group.PackageName, groupGoNames[gv], inputPath, boilerplate))
 			}
 		}
 	}
