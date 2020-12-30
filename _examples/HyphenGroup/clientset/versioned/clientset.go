@@ -24,7 +24,7 @@ import (
 	discovery "k8s.io/client-go/discovery"
 	rest "k8s.io/client-go/rest"
 	flowcontrol "k8s.io/client-go/util/flowcontrol"
-	examplegroupv1 "k8s.io/code-generator/_examples/HyphenGroup/clientset/versioned/typed/example/v1"
+	examplegroupv1 "github.com/ducesoft/code-generator/_examples/HyphenGroup/clientset/versioned/typed/example/v1"
 )
 
 type Interface interface {

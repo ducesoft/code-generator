@@ -23,9 +23,9 @@ import (
 
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
 	cache "k8s.io/client-go/tools/cache"
-	v1 "k8s.io/code-generator/_examples/apiserver/apis/example/v1"
-	example2v1 "k8s.io/code-generator/_examples/apiserver/apis/example2/v1"
-	example3iov1 "k8s.io/code-generator/_examples/apiserver/apis/example3.io/v1"
+	v1 "github.com/ducesoft/code-generator/_examples/apiserver/apis/example/v1"
+	example2v1 "github.com/ducesoft/code-generator/_examples/apiserver/apis/example2/v1"
+	example3iov1 "github.com/ducesoft/code-generator/_examples/apiserver/apis/example3.io/v1"
 )
 
 // GenericInformer is type of SharedIndexInformer which will locate and delegate to other

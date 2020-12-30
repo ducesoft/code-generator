@@ -24,9 +24,9 @@ import (
 	"k8s.io/client-go/discovery"
 	fakediscovery "k8s.io/client-go/discovery/fake"
 	"k8s.io/client-go/testing"
-	clientset "k8s.io/code-generator/_examples/HyphenGroup/clientset/versioned"
-	examplegroupv1 "k8s.io/code-generator/_examples/HyphenGroup/clientset/versioned/typed/example/v1"
-	fakeexamplegroupv1 "k8s.io/code-generator/_examples/HyphenGroup/clientset/versioned/typed/example/v1/fake"
+	clientset "github.com/ducesoft/code-generator/_examples/HyphenGroup/clientset/versioned"
+	examplegroupv1 "github.com/ducesoft/code-generator/_examples/HyphenGroup/clientset/versioned/typed/example/v1"
+	fakeexamplegroupv1 "github.com/ducesoft/code-generator/_examples/HyphenGroup/clientset/versioned/typed/example/v1/fake"
 )
 
 // NewSimpleClientset returns a clientset that will respond with the provided objects.

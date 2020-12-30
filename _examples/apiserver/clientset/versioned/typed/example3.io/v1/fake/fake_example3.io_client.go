@@ -21,7 +21,7 @@ package fake
 import (
 	rest "k8s.io/client-go/rest"
 	testing "k8s.io/client-go/testing"
-	v1 "k8s.io/code-generator/_examples/apiserver/clientset/versioned/typed/example3.io/v1"
+	v1 "github.com/ducesoft/code-generator/_examples/apiserver/clientset/versioned/typed/example3.io/v1"
 )
 
 type FakeThirdExampleV1 struct {

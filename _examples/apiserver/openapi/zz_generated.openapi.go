@@ -82,15 +82,15 @@ func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenA
 		"k8s.io/apimachinery/pkg/runtime.TypeMeta":                                     schema_k8sio_apimachinery_pkg_runtime_TypeMeta(ref),
 		"k8s.io/apimachinery/pkg/runtime.Unknown":                                      schema_k8sio_apimachinery_pkg_runtime_Unknown(ref),
 		"k8s.io/apimachinery/pkg/version.Info":                                         schema_k8sio_apimachinery_pkg_version_Info(ref),
-		"k8s.io/code-generator/_examples/apiserver/apis/example/v1.TestType":           schema_apiserver_apis_example_v1_TestType(ref),
-		"k8s.io/code-generator/_examples/apiserver/apis/example/v1.TestTypeList":       schema_apiserver_apis_example_v1_TestTypeList(ref),
-		"k8s.io/code-generator/_examples/apiserver/apis/example/v1.TestTypeStatus":     schema_apiserver_apis_example_v1_TestTypeStatus(ref),
-		"k8s.io/code-generator/_examples/apiserver/apis/example2/v1.TestType":          schema_apiserver_apis_example2_v1_TestType(ref),
-		"k8s.io/code-generator/_examples/apiserver/apis/example2/v1.TestTypeList":      schema_apiserver_apis_example2_v1_TestTypeList(ref),
-		"k8s.io/code-generator/_examples/apiserver/apis/example2/v1.TestTypeStatus":    schema_apiserver_apis_example2_v1_TestTypeStatus(ref),
-		"k8s.io/code-generator/_examples/apiserver/apis/example3.io/v1.TestType":       schema_apiserver_apis_example3io_v1_TestType(ref),
-		"k8s.io/code-generator/_examples/apiserver/apis/example3.io/v1.TestTypeList":   schema_apiserver_apis_example3io_v1_TestTypeList(ref),
-		"k8s.io/code-generator/_examples/apiserver/apis/example3.io/v1.TestTypeStatus": schema_apiserver_apis_example3io_v1_TestTypeStatus(ref),
+		"github.com/ducesoft/code-generator/_examples/apiserver/apis/example/v1.TestType":           schema_apiserver_apis_example_v1_TestType(ref),
+		"github.com/ducesoft/code-generator/_examples/apiserver/apis/example/v1.TestTypeList":       schema_apiserver_apis_example_v1_TestTypeList(ref),
+		"github.com/ducesoft/code-generator/_examples/apiserver/apis/example/v1.TestTypeStatus":     schema_apiserver_apis_example_v1_TestTypeStatus(ref),
+		"github.com/ducesoft/code-generator/_examples/apiserver/apis/example2/v1.TestType":          schema_apiserver_apis_example2_v1_TestType(ref),
+		"github.com/ducesoft/code-generator/_examples/apiserver/apis/example2/v1.TestTypeList":      schema_apiserver_apis_example2_v1_TestTypeList(ref),
+		"github.com/ducesoft/code-generator/_examples/apiserver/apis/example2/v1.TestTypeStatus":    schema_apiserver_apis_example2_v1_TestTypeStatus(ref),
+		"github.com/ducesoft/code-generator/_examples/apiserver/apis/example3.io/v1.TestType":       schema_apiserver_apis_example3io_v1_TestType(ref),
+		"github.com/ducesoft/code-generator/_examples/apiserver/apis/example3.io/v1.TestTypeList":   schema_apiserver_apis_example3io_v1_TestTypeList(ref),
+		"github.com/ducesoft/code-generator/_examples/apiserver/apis/example3.io/v1.TestTypeStatus": schema_apiserver_apis_example3io_v1_TestTypeStatus(ref),
 	}
 }
 
@@ -2513,14 +2513,14 @@ func schema_apiserver_apis_example_v1_TestType(ref common.ReferenceCallback) com
 					"status": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("k8s.io/code-generator/_examples/apiserver/apis/example/v1.TestTypeStatus"),
+							Ref:     ref("github.com/ducesoft/code-generator/_examples/apiserver/apis/example/v1.TestTypeStatus"),
 						},
 					},
 				},
 			},
 		},
 		Dependencies: []string{
-			"k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta", "k8s.io/code-generator/_examples/apiserver/apis/example/v1.TestTypeStatus"},
+			"k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta", "github.com/ducesoft/code-generator/_examples/apiserver/apis/example/v1.TestTypeStatus"},
 	}
 }
 
@@ -2558,7 +2558,7 @@ func schema_apiserver_apis_example_v1_TestTypeList(ref common.ReferenceCallback)
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("k8s.io/code-generator/_examples/apiserver/apis/example/v1.TestType"),
+										Ref:     ref("github.com/ducesoft/code-generator/_examples/apiserver/apis/example/v1.TestType"),
 									},
 								},
 							},
@@ -2569,7 +2569,7 @@ func schema_apiserver_apis_example_v1_TestTypeList(ref common.ReferenceCallback)
 			},
 		},
 		Dependencies: []string{
-			"k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta", "k8s.io/code-generator/_examples/apiserver/apis/example/v1.TestType"},
+			"k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta", "github.com/ducesoft/code-generator/_examples/apiserver/apis/example/v1.TestType"},
 	}
 }
 
@@ -2623,14 +2623,14 @@ func schema_apiserver_apis_example2_v1_TestType(ref common.ReferenceCallback) co
 					"status": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("k8s.io/code-generator/_examples/apiserver/apis/example2/v1.TestTypeStatus"),
+							Ref:     ref("github.com/ducesoft/code-generator/_examples/apiserver/apis/example2/v1.TestTypeStatus"),
 						},
 					},
 				},
 			},
 		},
 		Dependencies: []string{
-			"k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta", "k8s.io/code-generator/_examples/apiserver/apis/example2/v1.TestTypeStatus"},
+			"k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta", "github.com/ducesoft/code-generator/_examples/apiserver/apis/example2/v1.TestTypeStatus"},
 	}
 }
 
@@ -2668,7 +2668,7 @@ func schema_apiserver_apis_example2_v1_TestTypeList(ref common.ReferenceCallback
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("k8s.io/code-generator/_examples/apiserver/apis/example2/v1.TestType"),
+										Ref:     ref("github.com/ducesoft/code-generator/_examples/apiserver/apis/example2/v1.TestType"),
 									},
 								},
 							},
@@ -2679,7 +2679,7 @@ func schema_apiserver_apis_example2_v1_TestTypeList(ref common.ReferenceCallback
 			},
 		},
 		Dependencies: []string{
-			"k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta", "k8s.io/code-generator/_examples/apiserver/apis/example2/v1.TestType"},
+			"k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta", "github.com/ducesoft/code-generator/_examples/apiserver/apis/example2/v1.TestType"},
 	}
 }
 
@@ -2733,14 +2733,14 @@ func schema_apiserver_apis_example3io_v1_TestType(ref common.ReferenceCallback) 
 					"status": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("k8s.io/code-generator/_examples/apiserver/apis/example3.io/v1.TestTypeStatus"),
+							Ref:     ref("github.com/ducesoft/code-generator/_examples/apiserver/apis/example3.io/v1.TestTypeStatus"),
 						},
 					},
 				},
 			},
 		},
 		Dependencies: []string{
-			"k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta", "k8s.io/code-generator/_examples/apiserver/apis/example3.io/v1.TestTypeStatus"},
+			"k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta", "github.com/ducesoft/code-generator/_examples/apiserver/apis/example3.io/v1.TestTypeStatus"},
 	}
 }
 
@@ -2778,7 +2778,7 @@ func schema_apiserver_apis_example3io_v1_TestTypeList(ref common.ReferenceCallba
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("k8s.io/code-generator/_examples/apiserver/apis/example3.io/v1.TestType"),
+										Ref:     ref("github.com/ducesoft/code-generator/_examples/apiserver/apis/example3.io/v1.TestType"),
 									},
 								},
 							},
@@ -2789,7 +2789,7 @@ func schema_apiserver_apis_example3io_v1_TestTypeList(ref common.ReferenceCallba
 			},
 		},
 		Dependencies: []string{
-			"k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta", "k8s.io/code-generator/_examples/apiserver/apis/example3.io/v1.TestType"},
+			"k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta", "github.com/ducesoft/code-generator/_examples/apiserver/apis/example3.io/v1.TestType"},
 	}
 }
 

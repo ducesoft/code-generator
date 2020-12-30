@@ -26,10 +26,10 @@ import (
 	runtime "k8s.io/apimachinery/pkg/runtime"
 	watch "k8s.io/apimachinery/pkg/watch"
 	cache "k8s.io/client-go/tools/cache"
-	example3io "k8s.io/code-generator/_examples/apiserver/apis/example3.io"
-	clientsetinternalversion "k8s.io/code-generator/_examples/apiserver/clientset/internalversion"
-	internalinterfaces "k8s.io/code-generator/_examples/apiserver/informers/internalversion/internalinterfaces"
-	internalversion "k8s.io/code-generator/_examples/apiserver/listers/example3.io/internalversion"
+	example3io "github.com/ducesoft/code-generator/_examples/apiserver/apis/example3.io"
+	clientsetinternalversion "github.com/ducesoft/code-generator/_examples/apiserver/clientset/internalversion"
+	internalinterfaces "github.com/ducesoft/code-generator/_examples/apiserver/informers/internalversion/internalinterfaces"
+	internalversion "github.com/ducesoft/code-generator/_examples/apiserver/listers/example3.io/internalversion"
 )
 
 // TestTypeInformer provides access to a shared informer and lister for

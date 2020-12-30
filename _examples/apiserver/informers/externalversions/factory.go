@@ -27,11 +27,11 @@ import (
 	runtime "k8s.io/apimachinery/pkg/runtime"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
 	cache "k8s.io/client-go/tools/cache"
-	versioned "k8s.io/code-generator/_examples/apiserver/clientset/versioned"
-	example "k8s.io/code-generator/_examples/apiserver/informers/externalversions/example"
-	example2 "k8s.io/code-generator/_examples/apiserver/informers/externalversions/example2"
-	example3io "k8s.io/code-generator/_examples/apiserver/informers/externalversions/example3.io"
-	internalinterfaces "k8s.io/code-generator/_examples/apiserver/informers/externalversions/internalinterfaces"
+	versioned "github.com/ducesoft/code-generator/_examples/apiserver/clientset/versioned"
+	example "github.com/ducesoft/code-generator/_examples/apiserver/informers/externalversions/example"
+	example2 "github.com/ducesoft/code-generator/_examples/apiserver/informers/externalversions/example2"
+	example3io "github.com/ducesoft/code-generator/_examples/apiserver/informers/externalversions/example3.io"
+	internalinterfaces "github.com/ducesoft/code-generator/_examples/apiserver/informers/externalversions/internalinterfaces"
 )
 
 // SharedInformerOption defines the functional option type for SharedInformerFactory.

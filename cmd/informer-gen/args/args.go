@@ -21,7 +21,7 @@ import (
 	"path"
 
 	"github.com/spf13/pflag"
-	codegenutil "k8s.io/code-generator/pkg/util"
+	codegenutil "github.com/ducesoft/code-generator/pkg/util"
 	"k8s.io/gengo/args"
 )
 

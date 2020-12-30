@@ -24,13 +24,13 @@ import (
 	"k8s.io/client-go/discovery"
 	fakediscovery "k8s.io/client-go/discovery/fake"
 	"k8s.io/client-go/testing"
-	clientset "k8s.io/code-generator/_examples/apiserver/clientset/internalversion"
-	exampleinternalversion "k8s.io/code-generator/_examples/apiserver/clientset/internalversion/typed/example/internalversion"
-	fakeexampleinternalversion "k8s.io/code-generator/_examples/apiserver/clientset/internalversion/typed/example/internalversion/fake"
-	secondexampleinternalversion "k8s.io/code-generator/_examples/apiserver/clientset/internalversion/typed/example2/internalversion"
-	fakesecondexampleinternalversion "k8s.io/code-generator/_examples/apiserver/clientset/internalversion/typed/example2/internalversion/fake"
-	thirdexampleinternalversion "k8s.io/code-generator/_examples/apiserver/clientset/internalversion/typed/example3.io/internalversion"
-	fakethirdexampleinternalversion "k8s.io/code-generator/_examples/apiserver/clientset/internalversion/typed/example3.io/internalversion/fake"
+	clientset "github.com/ducesoft/code-generator/_examples/apiserver/clientset/internalversion"
+	exampleinternalversion "github.com/ducesoft/code-generator/_examples/apiserver/clientset/internalversion/typed/example/internalversion"
+	fakeexampleinternalversion "github.com/ducesoft/code-generator/_examples/apiserver/clientset/internalversion/typed/example/internalversion/fake"
+	secondexampleinternalversion "github.com/ducesoft/code-generator/_examples/apiserver/clientset/internalversion/typed/example2/internalversion"
+	fakesecondexampleinternalversion "github.com/ducesoft/code-generator/_examples/apiserver/clientset/internalversion/typed/example2/internalversion/fake"
+	thirdexampleinternalversion "github.com/ducesoft/code-generator/_examples/apiserver/clientset/internalversion/typed/example3.io/internalversion"
+	fakethirdexampleinternalversion "github.com/ducesoft/code-generator/_examples/apiserver/clientset/internalversion/typed/example3.io/internalversion/fake"
 )
 
 // NewSimpleClientset returns a clientset that will respond with the provided objects.

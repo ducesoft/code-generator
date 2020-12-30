@@ -22,7 +22,7 @@ import (
 	goflag "flag"
 
 	flag "github.com/spf13/pflag"
-	"k8s.io/code-generator/cmd/go-to-protobuf/protobuf"
+	"github.com/ducesoft/code-generator/cmd/go-to-protobuf/protobuf"
 )
 
 var g = protobuf.New()

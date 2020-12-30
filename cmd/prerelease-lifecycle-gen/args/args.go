@@ -20,7 +20,7 @@ import (
 	"fmt"
 
 	"github.com/spf13/pflag"
-	statusgenerators "k8s.io/code-generator/cmd/prerelease-lifecycle-gen/prerelease-lifecycle-generators"
+	statusgenerators "github.com/ducesoft/code-generator/cmd/prerelease-lifecycle-gen/prerelease-lifecycle-generators"
 	"k8s.io/gengo/args"
 )
 

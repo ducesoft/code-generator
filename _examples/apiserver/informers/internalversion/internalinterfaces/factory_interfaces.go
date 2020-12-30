@@ -24,7 +24,7 @@ import (
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	runtime "k8s.io/apimachinery/pkg/runtime"
 	cache "k8s.io/client-go/tools/cache"
-	internalversion "k8s.io/code-generator/_examples/apiserver/clientset/internalversion"
+	internalversion "github.com/ducesoft/code-generator/_examples/apiserver/clientset/internalversion"
 )
 
 // NewInformerFunc takes internalversion.Interface and time.Duration to return a SharedIndexInformer.

@@ -25,7 +25,7 @@ import (
 	"k8s.io/gengo/namer"
 	"k8s.io/gengo/types"
 
-	"k8s.io/code-generator/cmd/client-gen/generators/util"
+	"github.com/ducesoft/code-generator/cmd/client-gen/generators/util"
 )
 
 // genClientForType produces a file for each top-level type.

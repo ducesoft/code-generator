@@ -26,8 +26,8 @@ import (
 	types "k8s.io/apimachinery/pkg/types"
 	watch "k8s.io/apimachinery/pkg/watch"
 	rest "k8s.io/client-go/rest"
-	v1 "k8s.io/code-generator/_examples/HyphenGroup/apis/example/v1"
-	scheme "k8s.io/code-generator/_examples/HyphenGroup/clientset/versioned/scheme"
+	v1 "github.com/ducesoft/code-generator/_examples/HyphenGroup/apis/example/v1"
+	scheme "github.com/ducesoft/code-generator/_examples/HyphenGroup/clientset/versioned/scheme"
 )
 
 // TestTypesGetter has a method to return a TestTypeInterface.
