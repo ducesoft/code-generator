@@ -304,7 +304,7 @@ func groupPackage(basePackage string, internalVersionPackage string, groupVersio
 				outputPackage:             packageAlias,
 				groupVersions:             groupVersions,
 				imports:                   generator.NewImportTracker(),
-				internalInterfacesPackage: packageForInternalInterfaces(basePackage),
+				internalInterfacesPackage: packageForInternalInterfaces(internalVersionPackage),
 			})
 			return generators
 		},
@@ -331,7 +331,7 @@ func versionPackage(basePackage string, internalVersionPackage string, groupPkgN
 				outputPackage:             packageAlias,
 				imports:                   generator.NewImportTracker(),
 				types:                     typesToGenerate,
-				internalInterfacesPackage: packageForInternalInterfaces(basePackage),
+				internalInterfacesPackage: packageForInternalInterfaces(internalVersionPackage),
 			})
 
 			for _, t := range typesToGenerate {
@@ -347,7 +347,7 @@ func versionPackage(basePackage string, internalVersionPackage string, groupPkgN
 					imports:                   generator.NewImportTracker(),
 					clientSetPackage:          clientSetPackage,
 					listersPackage:            listersPackage,
-					internalInterfacesPackage: packageForInternalInterfaces(basePackage),
+					internalInterfacesPackage: packageForInternalInterfaces(internalVersionPackage),
 				})
 			}
 			return generators
