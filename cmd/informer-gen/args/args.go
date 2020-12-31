@@ -66,7 +66,7 @@ func (ca *CustomArgs) AddFlags(fs *pflag.FlagSet) {
 	fs.StringVar(&ca.ListersPackage, "listers-package", ca.ListersPackage, "the full package name for the listers to use")
 	fs.BoolVar(&ca.SingleDirectory, "single-directory", ca.SingleDirectory, "if true, omit the intermediate \"internalversion\" and \"externalversions\" subdirectories")
 	fs.StringSliceVar(&ca.PluralExceptions, "plural-exceptions", ca.PluralExceptions, "list of comma separated plural exception definitions in Type:PluralizedType format")
-	fs.StringVar(&ca.InformerPackage, "informer_package", ca.InformerPackage, "override base package in import block")
+	fs.StringVar(&ca.InformerPackage, "informer-package", ca.InformerPackage, "override base package in import block")
 }
 
 // Validate checks the given arguments.
