@@ -42,7 +42,7 @@ func NewInputBasePathValue(builder *groupVersionsBuilder, def string) *inputBase
 }
 
 func (s *inputBasePathValue) Set(val string) error {
-	s.builder.importBasePath = val
+	s.builder.importBasePath = strings.Split(val, ",")
 	return s.builder.update()
 }
 
@@ -51,7 +51,7 @@ func (s *inputBasePathValue) Type() string {
 }
 
 func (s *inputBasePathValue) String() string {
-	return s.builder.importBasePath
+	return strings.Join(s.builder.importBasePath, ",")
 }
 
 type gvPackagesValue struct {
@@ -108,7 +108,7 @@ func (s *gvPackagesValue) String() string {
 type groupVersionsBuilder struct {
 	value          *[]types.GroupVersions
 	groups         []string
-	importBasePath string
+	importBasePath []string
 }
 
 func NewGroupVersionsBuilder(groups *[]types.GroupVersions) *groupVersionsBuilder {
@@ -126,14 +126,16 @@ func (p *groupVersionsBuilder) update() error {
 			return err
 		}
 
-		versionPkg := types.PackageVersion{Package: path.Join(p.importBasePath, pth, gv.Group.NonEmpty(), gv.Version.String()), Version: gv.Version}
-		if group, ok := seenGroups[gv.Group]; ok {
-			seenGroups[gv.Group].Versions = append(group.Versions, versionPkg)
-		} else {
-			seenGroups[gv.Group] = &types.GroupVersions{
-				PackageName: gv.Group.NonEmpty(),
-				Group:       gv.Group,
-				Versions:    []types.PackageVersion{versionPkg},
+		for _, importBasePath := range p.importBasePath {
+			versionPkg := types.PackageVersion{Package: path.Join(importBasePath, pth, gv.Group.NonEmpty(), gv.Version.String()), Version: gv.Version}
+			if group, ok := seenGroups[gv.Group]; ok {
+				seenGroups[gv.Group].Versions = append(group.Versions, versionPkg)
+			} else {
+				seenGroups[gv.Group] = &types.GroupVersions{
+					PackageName: gv.Group.NonEmpty(),
+					Group:       gv.Group,
+					Versions:    []types.PackageVersion{versionPkg},
+				}
 			}
 		}
 	}
