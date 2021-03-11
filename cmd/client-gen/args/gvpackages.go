@@ -119,14 +119,17 @@ func NewGroupVersionsBuilder(groups *[]types.GroupVersions) *groupVersionsBuilde
 
 func (p *groupVersionsBuilder) update() error {
 	var seenGroups = make(map[types.Group]*types.GroupVersions)
-	for _, v := range p.groups {
+	for idx, v := range p.groups {
 		pth, gvString := parsePathGroupVersion(v)
 		gv, err := types.ToGroupVersion(gvString)
 		if err != nil {
 			return err
 		}
 
-		for _, importBasePath := range p.importBasePath {
+		for index, importBasePath := range p.importBasePath {
+			if idx != index {
+				continue
+			}
 			versionPkg := types.PackageVersion{Package: path.Join(importBasePath, pth, gv.Group.NonEmpty(), gv.Version.String()), Version: gv.Version}
 			if group, ok := seenGroups[gv.Group]; ok {
 				seenGroups[gv.Group].Versions = append(group.Versions, versionPkg)
