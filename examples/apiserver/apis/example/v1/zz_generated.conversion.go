@@ -25,7 +25,7 @@ import (
 
 	conversion "k8s.io/apimachinery/pkg/conversion"
 	runtime "k8s.io/apimachinery/pkg/runtime"
-	example "k8s.io/code-generator/examples/apiserver/apis/example"
+	example "github.com/ducesoft/code-generator/examples/apiserver/apis/example"
 )
 
 func init() {

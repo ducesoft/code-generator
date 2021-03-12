@@ -20,7 +20,7 @@ package internalversion
 
 import (
 	rest "k8s.io/client-go/rest"
-	"k8s.io/code-generator/examples/apiserver/clientset/internalversion/scheme"
+	"github.com/ducesoft/code-generator/examples/apiserver/clientset/internalversion/scheme"
 )
 
 type ThirdExampleInterface interface {

@@ -20,8 +20,8 @@ package v1
 
 import (
 	rest "k8s.io/client-go/rest"
-	v1 "k8s.io/code-generator/examples/HyphenGroup/apis/example/v1"
-	"k8s.io/code-generator/examples/HyphenGroup/clientset/versioned/scheme"
+	v1 "github.com/ducesoft/code-generator/examples/HyphenGroup/apis/example/v1"
+	"github.com/ducesoft/code-generator/examples/HyphenGroup/clientset/versioned/scheme"
 )
 
 type ExampleGroupV1Interface interface {

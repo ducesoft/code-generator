@@ -21,12 +21,12 @@ import (
 	"path/filepath"
 
 	"github.com/spf13/pflag"
-	"k8s.io/code-generator/cmd/lister-gen/generators"
-	"k8s.io/code-generator/pkg/util"
+	"github.com/ducesoft/code-generator/cmd/lister-gen/generators"
+	"github.com/ducesoft/code-generator/pkg/util"
 	"k8s.io/gengo/args"
 	"k8s.io/klog/v2"
 
-	generatorargs "k8s.io/code-generator/cmd/lister-gen/args"
+	generatorargs "github.com/ducesoft/code-generator/cmd/lister-gen/args"
 )
 
 func main() {

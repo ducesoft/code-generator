@@ -28,7 +28,7 @@ import (
 	types "k8s.io/apimachinery/pkg/types"
 	watch "k8s.io/apimachinery/pkg/watch"
 	testing "k8s.io/client-go/testing"
-	examplev1 "k8s.io/code-generator/examples/crd/apis/example/v1"
+	examplev1 "github.com/ducesoft/code-generator/examples/crd/apis/example/v1"
 )
 
 // FakeClusterTestTypes implements ClusterTestTypeInterface

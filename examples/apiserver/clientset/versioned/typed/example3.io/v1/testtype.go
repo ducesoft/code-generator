@@ -26,8 +26,8 @@ import (
 	types "k8s.io/apimachinery/pkg/types"
 	watch "k8s.io/apimachinery/pkg/watch"
 	rest "k8s.io/client-go/rest"
-	v1 "k8s.io/code-generator/examples/apiserver/apis/example3.io/v1"
-	scheme "k8s.io/code-generator/examples/apiserver/clientset/versioned/scheme"
+	v1 "github.com/ducesoft/code-generator/examples/apiserver/apis/example3.io/v1"
+	scheme "github.com/ducesoft/code-generator/examples/apiserver/clientset/versioned/scheme"
 )
 
 // TestTypesGetter has a method to return a TestTypeInterface.

@@ -26,10 +26,10 @@ import (
 	runtime "k8s.io/apimachinery/pkg/runtime"
 	watch "k8s.io/apimachinery/pkg/watch"
 	cache "k8s.io/client-go/tools/cache"
-	examplev1 "k8s.io/code-generator/examples/MixedCase/apis/example/v1"
-	versioned "k8s.io/code-generator/examples/MixedCase/clientset/versioned"
-	internalinterfaces "k8s.io/code-generator/examples/MixedCase/informers/externalversions/internalinterfaces"
-	v1 "k8s.io/code-generator/examples/MixedCase/listers/example/v1"
+	examplev1 "github.com/ducesoft/code-generator/examples/MixedCase/apis/example/v1"
+	versioned "github.com/ducesoft/code-generator/examples/MixedCase/clientset/versioned"
+	internalinterfaces "github.com/ducesoft/code-generator/examples/MixedCase/informers/externalversions/internalinterfaces"
+	v1 "github.com/ducesoft/code-generator/examples/MixedCase/listers/example/v1"
 )
 
 // ClusterTestTypeInformer provides access to a shared informer and lister for

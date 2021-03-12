@@ -19,8 +19,8 @@ limitations under the License.
 package example2
 
 import (
-	internalversion "k8s.io/code-generator/examples/apiserver/informers/internalversion/example2/internalversion"
-	internalinterfaces "k8s.io/code-generator/examples/apiserver/informers/internalversion/internalinterfaces"
+	internalversion "github.com/ducesoft/code-generator/examples/apiserver/informers/internalversion/example2/internalversion"
+	internalinterfaces "github.com/ducesoft/code-generator/examples/apiserver/informers/internalversion/internalinterfaces"
 )
 
 // Interface provides access to each of this group's versions.

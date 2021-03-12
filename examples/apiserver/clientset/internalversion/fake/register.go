@@ -24,9 +24,9 @@ import (
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
 	serializer "k8s.io/apimachinery/pkg/runtime/serializer"
 	utilruntime "k8s.io/apimachinery/pkg/util/runtime"
-	exampleinternalversion "k8s.io/code-generator/examples/apiserver/apis/example"
-	secondexampleinternalversion "k8s.io/code-generator/examples/apiserver/apis/example2"
-	thirdexampleinternalversion "k8s.io/code-generator/examples/apiserver/apis/example3.io"
+	exampleinternalversion "github.com/ducesoft/code-generator/examples/apiserver/apis/example"
+	secondexampleinternalversion "github.com/ducesoft/code-generator/examples/apiserver/apis/example2"
+	thirdexampleinternalversion "github.com/ducesoft/code-generator/examples/apiserver/apis/example3.io"
 )
 
 var scheme = runtime.NewScheme()

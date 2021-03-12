@@ -1,5 +1,5 @@
 {
-	"ImportPath": "k8s.io/code-generator",
+	"ImportPath": "github.com/ducesoft/code-generator",
 	"GoVersion": "unknown",
 	"GodepVersion": "gen-godeps",
 	"Packages": [

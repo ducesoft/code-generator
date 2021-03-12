@@ -27,7 +27,7 @@ import (
 	types "k8s.io/apimachinery/pkg/types"
 	watch "k8s.io/apimachinery/pkg/watch"
 	testing "k8s.io/client-go/testing"
-	example "k8s.io/code-generator/examples/apiserver/apis/example"
+	example "github.com/ducesoft/code-generator/examples/apiserver/apis/example"
 )
 
 // FakeTestTypes implements TestTypeInterface

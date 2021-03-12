@@ -24,9 +24,9 @@ import (
 	discovery "k8s.io/client-go/discovery"
 	rest "k8s.io/client-go/rest"
 	flowcontrol "k8s.io/client-go/util/flowcontrol"
-	examplev1 "k8s.io/code-generator/examples/apiserver/clientset/versioned/typed/example/v1"
-	secondexamplev1 "k8s.io/code-generator/examples/apiserver/clientset/versioned/typed/example2/v1"
-	thirdexamplev1 "k8s.io/code-generator/examples/apiserver/clientset/versioned/typed/example3.io/v1"
+	examplev1 "github.com/ducesoft/code-generator/examples/apiserver/clientset/versioned/typed/example/v1"
+	secondexamplev1 "github.com/ducesoft/code-generator/examples/apiserver/clientset/versioned/typed/example2/v1"
+	thirdexamplev1 "github.com/ducesoft/code-generator/examples/apiserver/clientset/versioned/typed/example3.io/v1"
 )
 
 type Interface interface {

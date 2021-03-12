@@ -24,11 +24,11 @@ import (
 	"k8s.io/client-go/discovery"
 	fakediscovery "k8s.io/client-go/discovery/fake"
 	"k8s.io/client-go/testing"
-	clientset "k8s.io/code-generator/examples/crd/clientset/versioned"
-	examplev1 "k8s.io/code-generator/examples/crd/clientset/versioned/typed/example/v1"
-	fakeexamplev1 "k8s.io/code-generator/examples/crd/clientset/versioned/typed/example/v1/fake"
-	secondexamplev1 "k8s.io/code-generator/examples/crd/clientset/versioned/typed/example2/v1"
-	fakesecondexamplev1 "k8s.io/code-generator/examples/crd/clientset/versioned/typed/example2/v1/fake"
+	clientset "github.com/ducesoft/code-generator/examples/crd/clientset/versioned"
+	examplev1 "github.com/ducesoft/code-generator/examples/crd/clientset/versioned/typed/example/v1"
+	fakeexamplev1 "github.com/ducesoft/code-generator/examples/crd/clientset/versioned/typed/example/v1/fake"
+	secondexamplev1 "github.com/ducesoft/code-generator/examples/crd/clientset/versioned/typed/example2/v1"
+	fakesecondexamplev1 "github.com/ducesoft/code-generator/examples/crd/clientset/versioned/typed/example2/v1/fake"
 )
 
 // NewSimpleClientset returns a clientset that will respond with the provided objects.

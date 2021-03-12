@@ -20,8 +20,8 @@ package v1
 
 import (
 	rest "k8s.io/client-go/rest"
-	v1 "k8s.io/code-generator/examples/crd/apis/example/v1"
-	"k8s.io/code-generator/examples/crd/clientset/versioned/scheme"
+	v1 "github.com/ducesoft/code-generator/examples/crd/apis/example/v1"
+	"github.com/ducesoft/code-generator/examples/crd/clientset/versioned/scheme"
 )
 
 type ExampleV1Interface interface {
