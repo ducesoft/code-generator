@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand />
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="93f9ac36-aa7d-4f17-bf17-3906e718c814" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/cmd/client-gen/args/args.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/client-gen/args/args.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/client-gen/args/gvpackages.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/client-gen/args/gvpackages.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/client-gen/generators/client_generator.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/client-gen/generators/client_generator.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/client-gen/generators/fake/fake_client_generator.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/client-gen/generators/fake/fake_client_generator.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/informer-gen/args/args.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/informer-gen/args/args.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/informer-gen/generators/packages.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/informer-gen/generators/packages.go" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="GOROOT" path="/usr/local/Cellar/go/1.15.5/libexec" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="false" />
+  </component>
+  <component name="KubernetesApiPersistence">
+    <option name="context" value="dev" />
+    <option name="namespace" value="cse-default" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="MessagesViewTool">
+    <option name="defaultListState">
+      <MessageListState>
+        <option name="autoscrollToSource" value="true" />
+        <option name="info" value="true" />
+        <option name="warnings" value="true" />
+      </MessageListState>
+    </option>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1mMhkBYfEHnDHZq0TTsRaibZiK8" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SshConsoleOptionsProvider">
+    <option name="myEncoding" value="UTF-8" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="93f9ac36-aa7d-4f17-bf17-3906e718c814" name="Default Changelist" comment="" />
+      <created>1609309508723</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1609309508723</updated>
+      <workItem from="1609309510179" duration="4890000" />
+      <workItem from="1609330780542" duration="12067000" />
+      <workItem from="1609934204270" duration="1688000" />
+      <workItem from="1611553982002" duration="2382000" />
+      <workItem from="1611575457148" duration="18988000" />
+      <workItem from="1615483120343" duration="4063000" />
+      <workItem from="1615537422721" duration="809000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UsagesViewTool">
+    <version id="1" />
+    <tabs />
+    <default_view_options>
+      <options category_option="false" module_option="true" model_option="true" root_option="true" path_option="false" count_option="true" info_option="true" view_searched_nodes_option="true" group_searched_nodes_option="true" autoscroll_option="false" />
+    </default_view_options>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="structure">
+                    <value>
+                      <list>
+                        <option value="dir:/Users/renjue.zc/com/github/code-generator/cmd/client-gen" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="1" value="TOOL_WINDOW" />
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>true</integration-enabled>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="100" y="123" width="1720" height="921" key="DiffContextDialog" timestamp="1615485423883">
+      <screen x="0" y="23" width="1920" height="1121" />
+    </state>
+    <state x="100" y="123" width="1720" height="921" key="DiffContextDialog/0.23.1920.1121@0.23.1920.1121" timestamp="1615485423883" />
+    <state x="770" y="324" key="VcsDiffUtil.ChangesDialog" timestamp="1615485165666">
+      <screen x="0" y="23" width="1920" height="1121" />
+    </state>
+    <state x="770" y="324" key="VcsDiffUtil.ChangesDialog/0.23.1920.1121@0.23.1920.1121" timestamp="1615485165666" />
+    <state x="661" y="341" width="651" height="544" key="find.popup" timestamp="1615537443954">
+      <screen x="0" y="23" width="1920" height="1121" />
+    </state>
+    <state x="661" y="336" width="651" height="534" key="find.popup/0.23.1920.1103@0.23.1920.1103" timestamp="1609934230783" />
+    <state x="661" y="338" width="651" height="538" key="find.popup/0.23.1920.1110@0.23.1920.1110" timestamp="1611553999703" />
+    <state x="661" y="341" width="651" height="544" key="find.popup/0.23.1920.1121@0.23.1920.1121" timestamp="1615537443954" />
+    <state x="625" y="273" width="670" height="688" key="search.everywhere.popup" timestamp="1615538218387">
+      <screen x="0" y="23" width="1920" height="1121" />
+    </state>
+    <state x="625" y="269" width="670" height="676" key="search.everywhere.popup/0.23.1920.1103@0.23.1920.1103" timestamp="1609934446082" />
+    <state x="625" y="271" width="670" height="681" key="search.everywhere.popup/0.23.1920.1110@0.23.1920.1110" timestamp="1611573940181" />
+    <state x="625" y="273" width="670" height="688" key="search.everywhere.popup/0.23.1920.1121@0.23.1920.1121" timestamp="1615538218387" />
+    <state x="690" y="493" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1609331675677">
+      <screen x="0" y="23" width="1920" height="1103" />
+    </state>
+    <state x="690" y="493" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.23.1920.1103@0.23.1920.1103" timestamp="1609331675677" />
+  </component>
+</project>

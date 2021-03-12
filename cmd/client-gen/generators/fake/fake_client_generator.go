@@ -29,13 +29,14 @@ import (
 	clientgentypes "k8s.io/code-generator/cmd/client-gen/types"
 )
 
-func PackageForGroup(gv clientgentypes.GroupVersion, typeList []*types.Type, clientsetPackage string, groupPackageName string, groupGoName string, inputPackage string, applyBuilderPackage string, boilerplate []byte) generator.Package {
+func PackageForGroup(gv clientgentypes.GroupVersion, typeList []*types.Type, clientsetPackage string, clientsetPath string, groupPackageName string, groupGoName string, inputPackage string, applyBuilderPackage string, boilerplate []byte) generator.Package {
 	outputPackage := filepath.Join(clientsetPackage, "typed", strings.ToLower(groupPackageName), strings.ToLower(gv.Version.NonEmpty()), "fake")
+	outputPath := filepath.Join(clientsetPath, "typed", strings.ToLower(groupPackageName), strings.ToLower(gv.Version.NonEmpty()), "fake")
 	// TODO: should make this a function, called by here and in client-generator.go
 	realClientPackage := filepath.Join(clientsetPackage, "typed", strings.ToLower(groupPackageName), strings.ToLower(gv.Version.NonEmpty()))
 	return &generator.DefaultPackage{
 		PackageName: "fake",
-		PackagePath: outputPackage,
+		PackagePath: outputPath,
 		HeaderText:  boilerplate,
 		PackageDocumentation: []byte(
 			`// Package fake has the automatically generated clients.
@@ -85,12 +86,12 @@ func PackageForGroup(gv clientgentypes.GroupVersion, typeList []*types.Type, cli
 	}
 }
 
-func PackageForClientset(customArgs *clientgenargs.CustomArgs, clientsetPackage string, groupGoNames map[clientgentypes.GroupVersion]string, boilerplate []byte) generator.Package {
+func PackageForClientset(customArgs *clientgenargs.CustomArgs, clientsetPackage string, clientsetPath string, groupGoNames map[clientgentypes.GroupVersion]string, boilerplate []byte) generator.Package {
 	return &generator.DefaultPackage{
 		// TODO: we'll generate fake clientset for different release in the future.
 		// Package name and path are hard coded for now.
 		PackageName: "fake",
-		PackagePath: filepath.Join(clientsetPackage, "fake"),
+		PackagePath: filepath.Join(clientsetPath, "fake"),
 		HeaderText:  boilerplate,
 		PackageDocumentation: []byte(
 			`// This package has the automatically generated fake clientset.
