@@ -43,7 +43,7 @@ func (g Group) String() string {
 
 func (g Group) NonEmpty() string {
 	if g == "api" {
-		return "core"
+		return "api"
 	}
 	return string(g)
 }
