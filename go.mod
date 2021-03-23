@@ -10,15 +10,15 @@ require (
 	github.com/gogo/protobuf v1.3.2
 	github.com/golang/protobuf v1.4.3 // indirect
 	github.com/google/go-cmp v0.5.2 // indirect
-	github.com/googleapis/gnostic v0.4.1
+	github.com/googleapis/gnostic v0.5.1
 	github.com/json-iterator/go v1.1.10 // indirect
 	github.com/kr/text v0.2.0 // indirect
 	github.com/mailru/easyjson v0.7.0 // indirect
 	github.com/niemeyer/pretty v0.0.0-20200227124842-a10e7caefd8e // indirect
-	github.com/onsi/ginkgo v1.11.0 // indirect
-	github.com/onsi/gomega v1.7.0 // indirect
 	github.com/spf13/pflag v1.0.5
 	github.com/stretchr/testify v1.6.1 // indirect
+	gitlab.alibaba-inc.com/cos/kubernetes-ephemeral-controller v0.0.0-20210323125806-36708b940e3f // indirect
+	gitlab.alibaba-inc.com/opur/operator/apis v0.0.0-20210323092843-7b539ecf0180 // indirect
 	golang.org/x/mod v0.3.1-0.20200828183125-ce943fd02449 // indirect
 	golang.org/x/net v0.0.0-20210224082022-3d97a244fca7 // indirect
 	golang.org/x/sys v0.0.0-20210225134936-a50acf3fe073 // indirect
@@ -27,8 +27,10 @@ require (
 	google.golang.org/protobuf v1.25.0 // indirect
 	gopkg.in/check.v1 v1.0.0-20200227125254-8fa46927fb4f // indirect
 	gopkg.in/yaml.v2 v2.4.0
+	k8s.io/api v0.20.5 // indirect
 	k8s.io/gengo v0.0.0-20201214224949-b6c5ce23f027
 	k8s.io/klog/v2 v2.5.0
 	k8s.io/kube-openapi v0.0.0-20210305001622-591a79e4bda7
+	sigs.k8s.io/controller-runtime v0.8.3 // indirect
 	sigs.k8s.io/structured-merge-diff/v4 v4.1.0 // indirect
 )

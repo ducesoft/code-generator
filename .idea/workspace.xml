@@ -6,12 +6,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93f9ac36-aa7d-4f17-bf17-3906e718c814" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/cmd/client-gen/args/args.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/client-gen/args/args.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/client-gen/args/gvpackages.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/client-gen/args/gvpackages.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/client-gen/generators/client_generator.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/client-gen/generators/client_generator.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/client-gen/generators/fake/fake_client_generator.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/client-gen/generators/fake/fake_client_generator.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/informer-gen/args/args.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/informer-gen/args/args.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/informer-gen/generators/packages.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/informer-gen/generators/packages.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/client-gen/generators/generator_for_group.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/client-gen/generators/generator_for_group.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/informer-gen/generators/generic.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/informer-gen/generators/generic.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +28,7 @@
   </component>
   <component name="KubernetesApiPersistence">
     <option name="context" value="dev" />
-    <option name="namespace" value="cse-default" />
+    <option name="namespace" value="default" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -65,20 +63,48 @@
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+  <component name="RunManager" selected="Go Build.go build github.com/ducesoft/code-generator/cmd/client-gen">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="go build github.com/ducesoft/code-generator/cmd/client-gen" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="code-generator" />
+      <working_directory value="$PROJECT_DIR$" />
+      <parameters value="--fake-clientset=false --input-base gitlab.alibaba-inc.com/cos/kubernetes-ephemeral-controller,gitlab.alibaba-inc.com/opur/operator/apis,github.com/traefik/traefik/v2/pkg/provider/kubernetes/crd --input-dirs gitlab.alibaba-inc.com/cos/kubernetes-ephemeral-controller/api/v1alpha1,gitlab.alibaba-inc.com/opur/operator/apis/opur/v1alpha1,github.com/traefik/traefik/v2/pkg/provider/kubernetes/crd/traefik/v1alpha1 --input api/v1alpha1,opur/v1alpha1,traefik/v1alpha1 --output-base $PROJECT_DIR$/../../aliyun/opur-group/operator/gen --output-package ./clientset --clientset-name clientset --clientset-package gitlab.alibaba-inc.com/opur/operator/gen/clientset --go-header-file $PROJECT_DIR$/../../aliyun/opur-group/operator/hack/boilerplate.go.txt" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/cmd/client-gen/main.go" />
+      <package value="github.com/ducesoft/code-generator/cmd/client-gen" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build github.com/ducesoft/code-generator/cmd/lister-gen" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="code-generator" />
+      <working_directory value="$PROJECT_DIR$" />
+      <parameters value="--input-dirs gitlab.alibaba-inc.com/cos/kubernetes-ephemeral-controller/api/v1alpha1 --output-base ./gen --output-package lister --go-header-file $PROJECT_DIR$/../../aliyun/opur-group/operator/hack/boilerplate.go.txt" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/cmd/lister-gen/main.go" />
+      <package value="github.com/ducesoft/code-generator/cmd/lister-gen" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Go Build.go build github.com/ducesoft/code-generator/cmd/client-gen" />
+      <item itemvalue="Go Build.go build github.com/ducesoft/code-generator/cmd/lister-gen" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.go build github.com/ducesoft/code-generator/cmd/client-gen" />
+        <item itemvalue="Go Build.go build github.com/ducesoft/code-generator/cmd/lister-gen" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SshConsoleOptionsProvider">
@@ -97,7 +123,14 @@
       <workItem from="1611553982002" duration="2382000" />
       <workItem from="1611575457148" duration="18988000" />
       <workItem from="1615483120343" duration="4063000" />
-      <workItem from="1615537422721" duration="1315000" />
+      <workItem from="1615537422721" duration="3231000" />
+      <workItem from="1615543335710" duration="3538000" />
+      <workItem from="1615861617007" duration="1542000" />
+      <workItem from="1615960129213" duration="598000" />
+      <workItem from="1616491354067" duration="386000" />
+      <workItem from="1616500101854" duration="10688000" />
+      <workItem from="1616530107491" duration="1018000" />
+      <workItem from="1616531474899" duration="1147000" />
     </task>
     <servers />
   </component>
@@ -146,31 +179,82 @@
         </entry>
       </map>
     </option>
-    <option name="OPEN_GENERIC_TABS">
-      <map>
-        <entry key="1" value="TOOL_WINDOW" />
-      </map>
-    </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
   </component>
   <component name="WindowStateProjectService">
-    <state x="100" y="123" width="1720" height="921" key="DiffContextDialog" timestamp="1615485423883">
-      <screen x="0" y="23" width="1920" height="1121" />
+    <state x="424" y="245" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1616532059673">
+      <screen x="0" y="23" width="1920" height="1126" />
+    </state>
+    <state x="424" y="245" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1920.1125@0.23.1920.1125" timestamp="1616503646414" />
+    <state x="424" y="245" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1920.1126@0.23.1920.1126" timestamp="1616532059673" />
+    <state x="723" y="300" key="#xdebugger.evaluate" timestamp="1616526739621">
+      <screen x="0" y="23" width="1920" height="1126" />
+    </state>
+    <state x="723" y="300" key="#xdebugger.evaluate/0.23.1920.1126@0.23.1920.1126" timestamp="1616526739621" />
+    <state x="100" y="123" width="1720" height="926" key="DiffContextDialog" timestamp="1616526913671">
+      <screen x="0" y="23" width="1920" height="1126" />
     </state>
     <state x="100" y="123" width="1720" height="921" key="DiffContextDialog/0.23.1920.1121@0.23.1920.1121" timestamp="1615485423883" />
+    <state x="100" y="123" width="1720" height="926" key="DiffContextDialog/0.23.1920.1126@0.23.1920.1126" timestamp="1616526913671" />
+    <state width="1878" height="374" key="GridCell.Tab.0.bottom" timestamp="1616532472067">
+      <screen x="0" y="23" width="1920" height="1126" />
+    </state>
+    <state width="1878" height="374" key="GridCell.Tab.0.bottom/0.23.1920.1125@0.23.1920.1125" timestamp="1616503649083" />
+    <state width="1878" height="374" key="GridCell.Tab.0.bottom/0.23.1920.1126@0.23.1920.1126" timestamp="1616532472067" />
+    <state width="1878" height="374" key="GridCell.Tab.0.center" timestamp="1616532472061">
+      <screen x="0" y="23" width="1920" height="1126" />
+    </state>
+    <state width="1878" height="374" key="GridCell.Tab.0.center/0.23.1920.1125@0.23.1920.1125" timestamp="1616503649081" />
+    <state width="1878" height="374" key="GridCell.Tab.0.center/0.23.1920.1126@0.23.1920.1126" timestamp="1616532472061" />
+    <state width="1878" height="374" key="GridCell.Tab.0.left" timestamp="1616532472060">
+      <screen x="0" y="23" width="1920" height="1126" />
+    </state>
+    <state width="1878" height="374" key="GridCell.Tab.0.left/0.23.1920.1125@0.23.1920.1125" timestamp="1616503649080" />
+    <state width="1878" height="374" key="GridCell.Tab.0.left/0.23.1920.1126@0.23.1920.1126" timestamp="1616532472060" />
+    <state width="1878" height="374" key="GridCell.Tab.0.right" timestamp="1616532472061">
+      <screen x="0" y="23" width="1920" height="1126" />
+    </state>
+    <state width="1878" height="374" key="GridCell.Tab.0.right/0.23.1920.1125@0.23.1920.1125" timestamp="1616503649082" />
+    <state width="1878" height="374" key="GridCell.Tab.0.right/0.23.1920.1126@0.23.1920.1126" timestamp="1616532472061" />
+    <state width="1878" height="374" key="GridCell.Tab.1.bottom" timestamp="1616532471941">
+      <screen x="0" y="23" width="1920" height="1126" />
+    </state>
+    <state width="1878" height="374" key="GridCell.Tab.1.bottom/0.23.1920.1125@0.23.1920.1125" timestamp="1616503648983" />
+    <state width="1878" height="374" key="GridCell.Tab.1.bottom/0.23.1920.1126@0.23.1920.1126" timestamp="1616532471941" />
+    <state width="1878" height="374" key="GridCell.Tab.1.center" timestamp="1616532471940">
+      <screen x="0" y="23" width="1920" height="1126" />
+    </state>
+    <state width="1878" height="374" key="GridCell.Tab.1.center/0.23.1920.1125@0.23.1920.1125" timestamp="1616503648982" />
+    <state width="1878" height="374" key="GridCell.Tab.1.center/0.23.1920.1126@0.23.1920.1126" timestamp="1616532471940" />
+    <state width="1878" height="374" key="GridCell.Tab.1.left" timestamp="1616532471940">
+      <screen x="0" y="23" width="1920" height="1126" />
+    </state>
+    <state width="1878" height="374" key="GridCell.Tab.1.left/0.23.1920.1125@0.23.1920.1125" timestamp="1616503648981" />
+    <state width="1878" height="374" key="GridCell.Tab.1.left/0.23.1920.1126@0.23.1920.1126" timestamp="1616532471940" />
+    <state width="1878" height="374" key="GridCell.Tab.1.right" timestamp="1616532471941">
+      <screen x="0" y="23" width="1920" height="1126" />
+    </state>
+    <state width="1878" height="374" key="GridCell.Tab.1.right/0.23.1920.1125@0.23.1920.1125" timestamp="1616503648982" />
+    <state width="1878" height="374" key="GridCell.Tab.1.right/0.23.1920.1126@0.23.1920.1126" timestamp="1616532471941" />
     <state x="770" y="324" key="VcsDiffUtil.ChangesDialog" timestamp="1615485165666">
       <screen x="0" y="23" width="1920" height="1121" />
     </state>
     <state x="770" y="324" key="VcsDiffUtil.ChangesDialog/0.23.1920.1121@0.23.1920.1121" timestamp="1615485165666" />
-    <state x="661" y="341" width="651" height="544" key="find.popup" timestamp="1615537443954">
-      <screen x="0" y="23" width="1920" height="1121" />
+    <state width="960" height="560" key="XDebugger.FullValuePopup" timestamp="1616528321129">
+      <screen x="0" y="23" width="1920" height="1126" />
+    </state>
+    <state width="960" height="560" key="XDebugger.FullValuePopup/0.23.1920.1126@0.23.1920.1126" timestamp="1616528321129" />
+    <state x="661" y="342" width="651" height="547" key="find.popup" timestamp="1616532544863">
+      <screen x="0" y="23" width="1920" height="1126" />
     </state>
     <state x="661" y="336" width="651" height="534" key="find.popup/0.23.1920.1103@0.23.1920.1103" timestamp="1609934230783" />
     <state x="661" y="338" width="651" height="538" key="find.popup/0.23.1920.1110@0.23.1920.1110" timestamp="1611553999703" />
-    <state x="661" y="341" width="651" height="544" key="find.popup/0.23.1920.1121@0.23.1920.1121" timestamp="1615537443954" />
+    <state x="661" y="341" width="651" height="544" key="find.popup/0.23.1920.1121@0.23.1920.1121" timestamp="1615539383553" />
+    <state x="661" y="342" width="651" height="546" key="find.popup/0.23.1920.1125@0.23.1920.1125" timestamp="1616503384777" />
+    <state x="661" y="342" width="651" height="547" key="find.popup/0.23.1920.1126@0.23.1920.1126" timestamp="1616532544863" />
     <state x="625" y="273" width="670" height="688" key="search.everywhere.popup" timestamp="1615538263070">
       <screen x="0" y="23" width="1920" height="1121" />
     </state>

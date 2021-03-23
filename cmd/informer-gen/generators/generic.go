@@ -114,7 +114,12 @@ func (g *genericGenerator) GenerateType(c *generator.Context, t *types.Type, w i
 				Resources: orderer.OrderTypes(g.typesForGroupVersion[gv]),
 			}
 			func() {
-				schemeGVs[version] = c.Universe.Variable(types.Name{Package: g.typesForGroupVersion[gv][0].Name.Package, Name: "SchemeGroupVersion"})
+				if nil != c.Universe.Package(g.typesForGroupVersion[gv][0].Name.Package).Variables["SchemeGroupVersion"] {
+					schemeGVs[version] = c.Universe.Variable(types.Name{Package: g.typesForGroupVersion[gv][0].Name.Package, Name: "SchemeGroupVersion"})
+				} else {
+					schemeGVs[version] = c.Universe.Variable(types.Name{Package: g.typesForGroupVersion[gv][0].Name.Package, Name: "GroupVersion"})
+				}
+
 			}()
 			group.Versions = append(group.Versions, version)
 		}
