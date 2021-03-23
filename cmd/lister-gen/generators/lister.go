@@ -222,9 +222,16 @@ func (g *listerGenerator) GenerateType(c *generator.Context, t *types.Type, w io
 
 	klog.V(5).Infof("processing type %v", t)
 	m := map[string]interface{}{
-		"Resource":   c.Universe.Function(types.Name{Package: t.Name.Package, Name: "Resource"}),
-		"type":       t,
-		"objectMeta": g.objectMeta,
+		"type":          t,
+		"objectMeta":    g.objectMeta,
+		"GroupResource": "",
+	}
+
+	if nil == c.Universe.Package(t.Name.Package).Functions["Resource"] {
+		m["Resource"] = c.Universe.Function(types.Name{Package: t.Name.Package, Name: "GroupVersion.WithResource"})
+		m["GroupResource"] = ".GroupResource()"
+	} else {
+		m["Resource"] = c.Universe.Function(types.Name{Package: t.Name.Package, Name: "Resource"})
 	}
 
 	tags, err := util.ParseClientGenTags(append(t.SecondClosestCommentLines, t.CommentLines...))
@@ -369,7 +376,7 @@ func (s $.type|private$NamespaceLister) Get(name string) (*$.type|raw$, error) {
 		return nil, err
 	}
 	if !exists {
-		return nil, errors.NewNotFound($.Resource|raw$("$.type|lowercaseSingular$"), name)
+		return nil, errors.NewNotFound($.Resource|raw$("$.type|lowercaseSingular$")$.GroupResource$, name)
 	}
 	return obj.(*$.type|raw$), nil
 }

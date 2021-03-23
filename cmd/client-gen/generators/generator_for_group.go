@@ -104,7 +104,7 @@ func (g *genGroup) GenerateType(c *generator.Context, t *types.Type, w io.Writer
 		"restRESTClientFor":              c.Universe.Function(types.Name{Package: "k8s.io/client-go/rest", Name: "RESTClientFor"}),
 		"SchemeGroupVersion":             c.Universe.Variable(types.Name{Package: path.Vendorless(g.inputPackage), Name: "SchemeGroupVersion"}),
 	}
-	if p.Has("SchemeGroupVersion") {
+	if nil != p.Variables["SchemeGroupVersion"] {
 		m["SchemeGroupVersion"] = c.Universe.Variable(types.Name{Package: path.Vendorless(g.inputPackage), Name: "SchemeGroupVersion"})
 	} else {
 		m["SchemeGroupVersion"] = c.Universe.Variable(types.Name{Package: path.Vendorless(g.inputPackage), Name: "GroupVersion"})
